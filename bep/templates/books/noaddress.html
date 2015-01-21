@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Please specify address</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/style2.css" />
+</head>
+
+<body>
+<h1>No address-{{request.user}}
+<a href="/"> <img src="{{ request.user.profile.profile_image_url }}"/></a>
+</h1>
+	<div id="no_address_container">
+	<h2>Please specify your adress, before trying to borrow a book</h2>
+	</div>
+</body>
+</html>

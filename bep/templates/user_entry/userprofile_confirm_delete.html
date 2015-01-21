@@ -1,0 +1,12 @@
+<title>Delete account</title>
+<link rel="stylesheet" type="text/css" href="/static/css/style2.css" />
+<h1>My Profile-{{object.user}}
+<a href="/"> <img src="{{ request.user.profile.profile_image_url }}"/></a>
+</h1>
+
+<div id="confirm_delete_container">
+<form method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object.user }}" ?</p> </br>
+    <input id="submit_button" type="submit" value="Confirm" />
+</form>
+</div>

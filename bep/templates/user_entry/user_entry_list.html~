@@ -1,0 +1,12 @@
+/*<h1>UserProfile</h1>
+<ul>
+    {% for userprofile in object_list %}
+    <li>{{ userprofile.username }}  :  
+    <a href="{% url "userprofile_edit" userprofile.id %}">{{ userprofile.username }}</a>
+    <a href="{% url "userprofile_delete" userprofile.id %}">delete</a>
+    <a href="{% url "userprofile_delete" userprofile.id %}">report</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url "userprofile_new" %}">New</a>*/

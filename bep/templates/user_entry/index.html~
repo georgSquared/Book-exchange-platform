@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+   	<title>{% if request.user.is_authenticated %}Logged In {% else %}Not Logged In{% endif %}</title>
+   	<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+   	<meta name="author" content="">
+   	<link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+
+    <!--<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">-->
+
+    <style type="text/css">
+    body{
+      background: gainsboro url("http://www.mrwallpaper.com/wallpapers/Old-Library.jpg") no-repeat;
+      background-size: 100%;
+    }
+   </style>
+  <title>{% if request.user.is_authenticated %}Logged In{% else %}Not Logged In{% endif %}</title>
+  <link rel="stylesheet" type="text/css" href="/static/dist/css/bootstrap.css" /> 
+
+  </head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+          <div class="navbar-collapse collapse">
+            <div class="{% if request.user.is_authenticated %}logged-in{% else %}logged-out{% endif %}">
+
+            {% if request.user.is_authenticated %}
+            <!--<img src="{{ request.user.profile.profile_image_url }}"/>-->
+            {% if request.user.first_name or request.user.last_name %}
+            <!-- {{ request.user.first_name }} {{ request.user.last_name }}-->
+	           <a href="/" class="navbar-brand">{{ request.user.username }}</a>
+	           <a href="/detail/{{user.id}}" class="navbar-brand">MyProfile</a>
+             <a href="/edit/{{user.id}}" class="navbar-brand">Edit</a>
+              <a href="/messages/compose/" class="navbar-brand">New message</a>
+              <a href="/messages/inbox/" class="navbar-brand">Inbox</a>
+              <a href="/messages/trash/" class="navbar-brand">Deleted-messages</a>
+              <a href="/messages/outbox/" class="navbar-brand">Sent-messages</a>
+              <a href="/accounts/logout/" class="navbar-brand">Logout</a>
+            {% else %}
+            <a href="/" class="navbar-brand">{{ request.user.username }}</a>
+            <a href="/detail/{{user.id}}" class="navbar-brand">MyProfile</a>
+            <a href="/edit/{{user.id}}" class="navbar-brand">Edit</a>
+            <a href="/messages/compose/" class="navbar-brand">New message</a>
+            <a href="/messages/inbox/" class="navbar-brand">Inbox</a>
+            <a href="/messages/trash/" class="navbar-brand">Deleted-messages</a>
+            <a href="/messages/outbox/" class="navbar-brand">Sent-messages</a>
+            <a href="/accounts/logout/" class="navbar-brand">Logout</a>
+
+            {% endif %}
+   <!-- {% if request.user.profile.account_verified %} (verified) {% else %} (unverified) {% endif %}-->
+ 
+          <form method="get" action="books/search/" class="navbar-form pull-right">
+          <input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder="Search">
+          <input id= "search_button" type="submit" class="btn" value="Search" >
+          </form>
+          {% else %}
+          <a href="/accounts/login/" class="navbar-brand">Login</a>
+          <a href="/accounts/signup/" class="navbar-brand">Sign Up</a>
+        
+          {% endif %}
+
+        </div>  
+      </div>
+    </div>
+  </div>
+
+
+<br><br><br><br><br><br>
+
+
+{% if request.user.is_authenticated %}
+
+	
+<!--   create an if here so that the container bellow is displayed only if the user has some books -->
+
+	<div id="my_books_container">
+		<h1 style="text-align:center;"> My books </h1>
+	<hr style="width:100%; height:5px; background: black;">
+  		{% for x in results  %}
+
+		   <div id="my_book_container">
+  			<h2> {{x.title}} </h2><br>
+ 			 <img src= {{x.image_url}} >
+
+ 		 {% if x.available == False %}
+    			<h2> {{x.borrower}} </h2><br>
+    			<form method="GET" action="/books/makeavailable/" >
+        
+       			 <input type="hidden" name="title2" value="{{x.title}}" >
+        		 <input id="available_button" type="submit" value="Make available" >
+       			</form>
+   		 {% endif %}
+		   </div>
+		{% endfor %}
+	</div>
+
+	
+
+{% endif %}
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

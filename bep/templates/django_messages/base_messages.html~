@@ -1,0 +1,21 @@
+		
+{% load i18n %}
+{% load url from future %} 
+{% block title %}{% endblock %}
+{% block bodyclass %}{% endblock %}
+{% block extra_head %}
+<h1><a href="/"> <img src="{{ request.user.profile.profile_image_url }}"/></a></h1>
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/style2.css" />
+
+  
+{% endblock %}
+{% block sidebar %}
+<!--<ul class="subnavilist">
+    <li><a href="{% url 'messages_inbox' %} ">&raquo;&nbsp;{% trans "Inbox" %}</a></li>
+    <li><a href="{% url 'messages_outbox' %} ">&raquo;&nbsp;{% trans "Sent Messages" %}</a></li>
+    <li><a href="{% url 'messages_compose' %} ">&raquo;&nbsp;{% trans "New Message" %}</a></li>
+    <li><a href="{% url 'messages_trash' %} ">&raquo;&nbsp;{% trans "Trash" %}</a></li>
+</ul> -->
+{% endblock %}

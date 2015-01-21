@@ -1,0 +1,760 @@
+body{
+    background: gainsboro url("/static/img/Old-Library3.jpg") no-repeat;
+    background-size: 125%;
+    height:125%;
+    width:125%;
+    }
+a {
+	text-decoration: none;
+	color: black;
+	font-family:'Oswald', sans-serif;
+	font-size: 20px;
+    
+}
+
+p,h3{
+    text-decoration: none;
+    color: black;
+    font-family:'Oswald', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+	
+}
+
+/*p1{
+    text-decoration: none;
+    color: #FBB117;
+    text-align: none;
+    text-decoration: none;
+    font-size: 20px;
+}
+p2{
+    text-decoration: none;
+    color: #FBB117;
+    text-align: none;
+    text-decoration: none;
+    font-size: 25px;
+}
+p3{
+    text-decoration: none;
+    color: black;
+    text-align: none;
+    text-decoration: none;
+    font-size: 30px;
+}*/
+h1{
+	/*color: #996600;*/
+	color: grey;
+	padding: 0;
+	margin: 0 0 5px 0;
+	text-decoration: none;
+	width: 50%;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+input[type='password'],
+input[type='text'],
+input[type='email'] {
+    width: %;
+    padding: 2px 4px;
+    margin: 6px;
+    border-radius:4px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    
+}
+
+
+
+#user_info{
+	position:absolute;
+    	width:25%;
+   	height:auto;
+    	opacity:.6;
+    	top: 15%;     
+    	left:2%;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444;    
+	font-family:'Oswald', sans-serif;
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;     
+   
+
+
+}
+
+#my_books{
+	position:absolute;
+    	width:25%;
+   	height:auto;
+    	opacity:.6;
+    	top: 48%;     
+    	left:2%;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444;
+	color:black;   
+	font-family:'Oswald', sans-serif; 
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;     
+   
+
+
+}
+
+#points{
+	position:absolute;
+    	width:25%;
+   	height:auto;
+    	opacity:.6;
+    	top: 80%;     
+    	left:2%;
+    	padding: 20px;
+    	background: white;
+	font-family:'Oswald', sans-serif;
+   	border: 2px solid #444444;
+	font-size: 20px;
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;     
+   
+
+
+}
+
+#report{
+	position:absolute;
+    	width:auto;
+   	height:auto;
+    	top: 93%;     
+    	left:2%;
+    	padding: 5px;
+	margin-left:1%;
+	background: #290f0f;
+	background-image: -webkit-linear-gradient(top, #290f0f, #993333);
+	background-image: -moz-linear-gradient(top, #290f0f, #993333);
+	background-image: -ms-linear-gradient(top, #290f0f, #993333);
+	background-image: -o-linear-gradient(top, #290f0f, #993333);
+	background-image: linear-gradient(to bottom, #290f0f, #993333);
+   	/*border: 2px solid #444444;
+	display: inline-block;*/
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;he Two Towers
+}
+#report:hover {
+	background: #993333;
+	text-decoration: none;
+}
+
+#delete_account{
+	position:absolute;
+    	width:auto;
+   	height:auto;
+    	top: 93%;     
+    	margin-left:10%;
+    	padding: 5px;
+    	background: #290f0f;
+	background-image: -webkit-linear-gradient(top, #290f0f, #993333);
+	background-image: -moz-linear-gradient(top, #290f0f, #993333);
+	background-image: -ms-linear-gradient(top, #290f0f, #993333);
+	background-image: -o-linear-gradient(top, #290f0f, #993333);
+	background-image: linear-gradient(to bottom, #290f0f, #993333);
+   	/*border: 2px solid #444444;  
+	display: inline-block;*/
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;
+}
+#delete_account:hover {
+	background: #993333;
+	text-decoration: none;
+}
+
+#submit_button{
+	position:relative;
+    	width:auto;
+   	height:auto;    
+        top: 25;
+  	left: 20%;
+  	//margin-top:10%;
+  	padding: 5px;
+    	background: #290f0f;
+	background-image: -webkit-linear-gradient(top, #290f0f, #993333);
+	background-image: -moz-linear-gradient(top, #290f0f, #993333);
+	background-image: -ms-linear-gradient(top, #290f0f, #993333);
+	background-image: -o-linear-gradient(top, #290f0f, #993333);
+	background-image: linear-gradient(to bottom, #290f0f, #993333);
+	color:black;
+	font-family:'Oswald', sans-serif;
+	font-size: 20px;
+	/*text-align: center;
+    	text-decoration: none;*/
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;
+}
+#submit_button:hover {
+	background: #993333;
+	text-decoration: none;
+}
+
+#delete_button{
+	width:auto;
+   	height:auto;
+    	padding: 5px;
+    	background: #290f0f;
+	background-image: -webkit-linear-gradient(top, #290f0f, #993333);
+	background-image: -moz-linear-gradient(top, #290f0f, #993333);
+	background-image: -ms-linear-gradient(top, #290f0f, #993333);
+	background-image: -o-linear-gradient(top, #290f0f, #993333);
+	background-image: linear-gradient(to bottom, #290f0f, #993333);
+	font-size:15px;
+	color:black;
+	font-family:'Oswald', sans-serif;	
+    	/*text-decoration: none;*/
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;
+}
+#delete_button:hover {
+	background: #993333;
+	text-decoration: none;
+}
+#book_button{
+	width:auto;
+   	height:auto;
+    	padding: 5px;
+    	background: #290f0f;
+	background-image: -webkit-linear-gradient(top, #290f0f, #993333);
+	background-image: -moz-linear-gradient(top, #290f0f, #993333);
+	background-image: -ms-linear-gradient(top, #290f0f, #993333);
+	background-image: -o-linear-gradient(top, #290f0f, #993333);
+	background-image: linear-gradient(to bottom, #290f0f, #993333);
+	font-size:15px;
+	color:black;
+	font-family:'Oswald', sans-serif;
+	
+    	/*text-decoration: none;*/
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;
+}
+#book_button:hover {
+	background: #993333;
+	text-decoration: none;
+}
+
+
+.navbar-brand{
+    text-decoration: none;
+    color: #FBB117;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    word-spacing: 20px;	
+}
+
+.logged-in {
+    background: gainsboro url("/static/img/CCTVMobile.jpg") no-repeat center 80px;
+}
+.logged-out {
+    background: gainsboro url("/static/img/Old-Library3.jpg") no-repeat;
+    background-size: 100%;
+}
+.login_body {
+    background: url('/static/img/Old-Library3.jpg') no-repeat;
+    background-size: 100%;
+    color: #4d4d4d;
+    font-family: 'Oswald', sans-serif;
+    font-size:  14px;
+}
+.fb {
+    background: url('/static/img/fb_200.png') no-repeat center top;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.7);
+    border-radius: 5px;
+    width: 198px;
+    height: 37px;
+    margin: 80px auto;
+    overflow: hidden;
+}
+.inset {
+    width: 200px;
+    padding: 30px;
+    background: rgba(255,255,255,.65);
+    box-shadow: 2px 2px 8px rgba(0,0,0,.7);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+.inset .header {
+    margin-bottom: 10px;
+}
+.remember-forgot-section {
+    width: 94%;
+    text-align: left;
+    margin: 8px auto;
+    font-size: 10px;
+}
+.forgot {
+    float: right;
+    margin-top: 2px;
+}
+.footnote {
+    position: relative;
+    top: 14px;
+    margin-top: 6px;
+    font-size: 10px;
+}
+.banner-img-logged-out,
+.banner-img {
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:50px;
+}
+.pull-right {
+    float:right;
+    
+}
+.btn {
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: rgb(102, 140, 94);
+    background-image: -moz-linear-gradient(top, rgb(158, 194, 142), rgb(104, 143, 96));
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#9ec28e),to(#688f60));
+    background-image: -webkit-linear-gradient(top, #9ec28e, #688f60);
+    background-image: -o-linear-gradient(top, #9ec28e, #688f60);
+    background-image: linear-gradient(to bottom, #9ec28e, #688f60);
+    background-repeat: repeat-x;
+    border-color: #5f8657;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-width: 2px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 3px 18px 5px 18px;
+}
+
+.btn:hover,
+.btn.active {
+    box-shadow: 1px 1px 9px rgba(0,0,0,.7);
+}
+
+ul.errorlist {
+    margin: 0;
+    padding: 0;
+}
+ul.errorlist li {
+    display: inline;
+    color: red;
+    font-size: 12px;
+}
+
+#map{
+    position:absolute;;
+    left: 40%;
+    top: 20%;
+        
+}
+
+#books_container{
+
+	position:absolute;
+    	width:60%;
+   	height:auto;
+    	opacity:.6;
+    	top: 10%;     
+    	left:2%;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444; 
+	display:inline-block;   
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+
+#book_container{
+		//position:relative;
+		display:inline-block;
+		margin-right: 2%;
+		//margin-top:3%;
+		height:400px;
+		overflow:hidden;
+		padding-right:2px;
+		width:30%;
+		
+}
+
+#book_image{
+	//position:
+	//margin-top: 2%;
+	
+}
+
+
+#select_button{
+	width:auto;
+   	height:auto;
+    	padding: 5px;
+    	background: #290f0f;
+	background-image: -webkit-linear-gradient(top, #290f0f, #993333);
+	background-image: -moz-linear-gradient(top, #290f0f, #993333);
+	background-image: -ms-linear-gradient(top, #290f0f, #993333);
+	background-image: -o-linear-gradient(top, #290f0f, #993333);
+	background-image: linear-gradient(to bottom, #290f0f, #993333);
+	font-size:15px;
+	color:black;
+	font-family:'Oswald', sans-serif;
+	
+    	/*text-decoration: none;*/
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;
+}
+#select_button:hover {
+	background: #993333;
+	text-decoration: none;
+}
+
+
+#inbox_container{
+	position: absolute;
+  	top: 10%;
+  	float:left;  	
+    	width:auto;
+   	height:auto;
+    	opacity:.7;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444; 	   
+	overflow:hidden;
+	overflow-y:auto;
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+
+
+#trash_container{
+	position: absolute;
+  	top: 10%;
+  	float:left;  	
+    	width:auto;
+   	height:auto;
+    	opacity:.7;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444; 	   
+	overflow:hidden;
+	overflow-y:auto;
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+#sent_container{
+	position: absolute;
+  	top: 10%;
+  	float:left;  	
+    	width:auto;
+   	height:auto;
+    	opacity:.7;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444; 	   
+	overflow:hidden;
+	overflow-y:auto;
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+
+#sign_out_container{
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  
+  	transform: translate(-50%, -50%); 	
+    	width:auto;
+   	height:auto;
+    	opacity:.7;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444; 	
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+
+#added_book_container{
+	position: absolute;
+  	top: 13%;
+  	float:left;  	
+    	width:auto;
+   	height:auto;
+    	opacity:.7;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444; 	   
+	overflow:hidden;
+	overflow-y:auto;
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+
+#found_book_container{
+	position: absolute;
+  	top: 13%;
+  	float:left;  	
+    	width:auto;
+   	height:auto;
+    	opacity:.7;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444; 	   
+	overflow:hidden;
+	overflow-y:auto;
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+
+#no_points_container{
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  
+  	transform: translate(-50%, -50%);	
+    	width:auto;
+   	height:auto;
+    	opacity:.7;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444; 	
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+
+#confirm_delete_container{
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+        text_align:center;
+  	transform: translate(-50%, -50%);	
+    	width:auto;
+   	height:auto;
+    	opacity:.7;
+    	padding: 20px;
+    	background: white;
+   	border: 2px solid #444444; 	
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+
+#change_profile_container{
+	position: absolute;
+  	top: 13%;
+  	float:left;  	
+    	width:auto;
+   	height:auto;
+    	opacity:.7;
+    	padding: 10px 10px 0px 10px;
+	
+    	background: white;
+   	border: 2px solid #444444; 	   
+	overflow:hidden;
+	overflow-y:auto;
+	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px; 
+
+
+}
+
+#sign_out_button{
+	position:relative;
+    	width:auto;
+   	height:auto;    
+        top: 50%;
+  	left: 50%;
+  	margin-top:5%;
+  	transform: translate(-50%, -50%);
+    	padding: 5px;
+    	background: #290f0f;
+	background-image: -webkit-linear-gradient(top, #290f0f, #993333);
+	background-image: -moz-linear-gradient(top, #290f0f, #993333);
+	background-image: -ms-linear-gradient(top, #290f0f, #993333);
+	background-image: -o-linear-gradient(top, #290f0f, #993333);
+	background-image: linear-gradient(to bottom, #290f0f, #993333);
+	color:black;
+	font-family:'Oswald', sans-serif;
+	font-size: 20px;
+	/*text-align: center;
+    	text-decoration: none;*/
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;
+}
+
+
+#sign_out_button:hover {
+	background: #993333;
+	text-decoration: none;
+}
+
+#edit_submit_button{
+	position:relative;
+    	width:auto;
+   	height:auto;    
+        top: 50%;
+  	left: 50%;
+  	margin-top:10%;
+  	transform: translate(-50%, -50%);
+    	padding: 5px;
+    	background: #290f0f;
+	background-image: -webkit-linear-gradient(top, #290f0f, #993333);
+	background-image: -moz-linear-gradient(top, #290f0f, #993333);
+	background-image: -ms-linear-gradient(top, #290f0f, #993333);
+	background-image: -o-linear-gradient(top, #290f0f, #993333);
+	background-image: linear-gradient(to bottom, #290f0f, #993333);
+	color:black;
+	font-family:'Oswald', sans-serif;
+	font-size: 20px;
+	/*text-align: center;
+    	text-decoration: none;*/
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;
+}
+
+
+#edit_submit_button:hover {
+	background: #993333;
+	text-decoration: none;
+}
+
+#confirm_delete_button{
+	position:relative;
+    	width:auto;
+   	height:auto;    
+        top: 50%;
+  	left: 50%;
+  	margin-top:10%;
+  	transform: translate(-50%, -50%);
+    	padding: 5px;
+    	background: #290f0f;
+	background-image: -webkit-linear-gradient(top, #290f0f, #993333);
+	background-image: -moz-linear-gradient(top, #290f0f, #993333);
+	background-image: -ms-linear-gradient(top, #290f0f, #993333);
+	background-image: -o-linear-gradient(top, #290f0f, #993333);
+	background-image: linear-gradient(to bottom, #290f0f, #993333);
+	color:black;
+	font-family:'Oswald', sans-serif;
+	font-size: 20px;
+	/*text-align: center;
+    	text-decoration: none;*/
+
+    	border-radius: 30px 30px 30px 30px;
+    	-moz-border-radius: 30px 30px 30px 30px;
+    	-webkit-border-radius: 30px 30px 30px 30px;
+}
+
+
+#confirm_delete_button:hover {
+	background: #993333;
+	text-decoration: none;
+}
+
+#no_address_container{
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:auto;
+    opacity:.7;
+    padding: 20px;
+    background: white;
+    border: 2px solid #444444; 
+  
+  border-radius: 30px 30px 30px 30px;
+    -moz-border-radius: 30px 30px 30px 30px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+
+}
+
+#ooooops_container{
+  position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    width:auto;
+    height:auto;
+    opacity:.7;
+    padding: 20px;
+    background: white;
+    border: 2px solid #444444; 
+  
+  border-radius: 30px 30px 30px 30px;
+    -moz-border-radius: 30px 30px 30px 30px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+
+}

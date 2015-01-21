@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/static/css/style2.css" />
+		<title>Is there a Book?</title>
+		<h1>Books found-{{object.user}} <a href="/"> <img src="{{ request.user.profile.profile_image_url }}"/></a> </h1>
+
+	</head>
+	
+	<div id="found_book_container">
+	<body>
+	{% if book_exists %}
+		<h3>The following users have the book you seek:</h3>
+
+		{% for x in results %}
+			
+
+			<p><strong>{{x.username}}</strong>  that lives in <strong>{{x.distance}} m</strong> away from you!</p>
+
+			
+			
+			{% if x.available %}
+ 
+			<form method="GET" action="/books/selectuser/" >
+		
+			<input type="hidden" name="owner" value="{{x.username}}" >
+			<input type="hidden" name="title" value="{{title}}" >
+		 	<input id="select_button" type="submit" value="Select user" >
+		</form>
+		{% else %}
+		<strong>Not available</strong>
+		{% endif %}
+		{% endfor %}
+
+	{% else %}
+		<h3>Sorry we dont seem to have that</h3>
+	
+	{% endif %}
+	</div>
+	</body>
+</html>	

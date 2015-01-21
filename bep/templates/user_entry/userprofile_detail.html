@@ -1,0 +1,36 @@
+<title>Myprofile</title>
+<link rel="stylesheet" type="text/css" href="/static/css/style2.css" />
+<h1>My Profile-{{object.user}}
+<a href="/"> <img style="width:50px; height:50px;" src="{{ request.user.profile.profile_image_url }}"/></a>
+</h1>
+
+
+	{% load easy_maps_tags %}
+
+	<div id="user_info">
+		<a href="{% url "userprofile_edit" userprofile.id %}" ><strong>First Name:</strong>{{object.first_name}}</a></br></br>
+		<a href="{% url "userprofile_edit" userprofile.id %}" ><strong>Last Name:</strong>{{object.last_name}}</a></br></br>
+		<a href="{% url "userprofile_edit" userprofile.id %}" ><strong>Address:</strong>{{object.address}}</a>
+	</div>
+
+	<div id="my_books">
+		
+    		 	<strong style="font-size:20px;">My Books</strong>   
+	        	<p>Available: {{object.books_available}}</p> 
+	       		<p>Borrowed: {{object.books_borrowed}}</p>
+		
+	</div>
+
+
+	<div id="points">
+	<strong style="font-size:20px;">Points:</strong>  {{object.points}}
+	
+	</div>
+
+	<a id="report" href="/messages/compose/admin"> Report </a>
+	<a id="delete_account" href="/confirm_delete/"> Delete account</a>
+
+
+	<div id="map">
+    		{% easy_map object.address 700 350 %}
+	</div>

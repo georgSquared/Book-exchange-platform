@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Added New Book</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/style2.css" />
+		<h1>Added Books List-{{object.user}}
+		<a href="/"> <img src="{{ request.user.profile.profile_image_url }}"/></a>
+		</h1>
+	</head>
+
+
+	<body>
+	
+	<div id="added_book_container">
+		{% if book_exists %}
+			<h3>You already have this book on your shelf</h3>
+
+		{% else %}
+			<h3>You have added a new book on your shelf</h3>
+	
+		{% endif %}
+		<hr style="height:5px; background: black;">
+		<h2>{{title}}</h2>
+
+		<div>
+
+		 <img id src={{image}}>
+		</div>
+
+
+		<div>
+		 <h3> {{author}} </h3> 
+		</div>
+	</div>
+	</body>
+</html>	

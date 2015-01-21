@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Search Results</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/style2.css" />
+		<h1>Book Results-{{object.user}}
+		<a href="/"> <img src="{{ request.user.profile.profile_image_url }}"/></a>
+		</h1>
+	</head>
+	
+	<body>
+	
+	<div id="books_container">
+		{% for x in results  %}
+
+	   <div id="book_container">
+
+		<div id="book_title"> 
+		  <strong>{{x.title}}</strong> 
+		</div>
+	
+		</br>
+
+		<div id="book_image">
+		 <img  src= {{ x.image }}>
+		</div>
+
+		</br>
+
+		<div id="book_author">
+		 <h3> {{x.author}} </h3>
+		</div>
+		
+
+		<form method="GET" action="/books/add/" >
+		{% csrf_token %}
+			<input type="hidden" name="title" value="{{x.title}}" >
+			<input type="hidden" name="image" value="{{x.image}}" >
+			<input type="hidden" name="author" value="{{x.author}}" >
+		 	<input id="book_button" type="submit" value="Add Book" >
+		</form>
+		
+
+		<form method="GET" action="/books/find/" >
+		{% csrf_token %}
+			<input type="hidden" name="title" value="{{x.title}}" >
+			<input type="hidden" name="image" value="{{x.image}}" >
+			<input type="hidden" name="author" value="{{x.author}}" >
+		 	<input id="book_button" type="submit" value="Find Book" >
+		</form>
+
+		</div>
+
+		{% endfor %}
+
+
+	</div>
+	   
+		
+	
+
+
+		
+
+	</body>
+</html>

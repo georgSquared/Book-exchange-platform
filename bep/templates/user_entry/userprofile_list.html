@@ -1,0 +1,14 @@
+<h1>UserProfile</h1>
+<ul>
+	{% load easy_maps_tags %}
+	{% for userprofile in object_list %}
+
+    <li>{{ userprofile.user }}  :  
+    <a href="{% url "userprofile_edit" userprofile.id %}">{{ userprofile.user }}</a>
+    <a href="{% url "userprofile_delete" userprofile.id %}">delete</a>
+    	
+    </li>
+    {%endfor%}
+</ul>
+
+<a href="{% url "userprofile_new" %}">New</a>

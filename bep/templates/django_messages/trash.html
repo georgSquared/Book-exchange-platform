@@ -1,0 +1,42 @@
+<title>Deleted Messages</title>
+{% extends "django_messages/base_messages.html" %} 
+{% load i18n %} 
+{% load url from future %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/static/css/style2.css" /> 
+<h1>{% trans "Deleted Messages" %}<a href="/"> <img src="{{ request.user.profile.profile_image_url }}"/></a></h1>
+
+{% if message_list %}
+<body>
+
+<div id="trash_container">
+<table class="messages">
+    <thead>
+        <tr><th>{% trans "Sender" %}</th><td></td><td></td><td></td><th>{% trans "Subject" %}</th><td></td><td></td><td></td><th>{% trans "Date" %}</th><td></td><td></td><td></td><th>{% trans "Action" %}</th></tr><tr></tr><tr></tr><tr></tr>
+    </thead>
+    <tbody>
+{% for message in message_list %} 
+    <tr>
+        <td>{{ message.sender }}</td><td></td><td></td><td></td>
+        <td> 
+        <p><strong>{{ message.subject }}</strong></p>
+        </td><td></td><td></td><td></td>
+        <td>{{ message.sent_at|date:_("DATETIME_FORMAT") }}</td><td></td><td></td><td></td>
+        <td><a id="delete_button" href="{% url 'messages_undelete' message.id %}">{% trans "undelete" %}</a></td>
+    </tr><tr></tr><tr></tr><tr></tr>
+{% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>{% trans "No messages." %}</p>
+
+</div>
+{% endif %}   
+<br />
+
+
+
+
+</body>
+{% endblock %}

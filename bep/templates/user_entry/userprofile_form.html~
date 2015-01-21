@@ -1,0 +1,19 @@
+<title>Edit Profile</title>
+
+<link rel="stylesheet" type="text/css" href="/static/css/style2.css" />
+<h1>Edit Profile-{{object.user}}
+<a href="/"> <img src="{{ request.user.profile.profile_image_url }}"/></a>
+</h1>
+
+<link rel="stylesheet" type="text/css" href="/static/css/style2.css" /> 
+
+{% load easy_maps_tags %}
+
+<form id="my_profile" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input id="submit_button" type="submit" value="Submit" />
+</form>
+
+<div id=map>
+    	{% easy_map object.address 700 350 %}
+</div>
